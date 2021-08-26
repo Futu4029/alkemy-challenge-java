@@ -1,6 +1,5 @@
-package com.alkemychallenge.movies.persistencia.dao.jdbc.hibernate;
+package com.alkemychallenge.movies.persistencia.hibernate;
 
-import com.alkemychallenge.movies.model.Pelicula;
 import com.alkemychallenge.movies.model.Personaje;
 
 public class HibernatePersonajeDAO  extends HibernateDAO<Personaje> {

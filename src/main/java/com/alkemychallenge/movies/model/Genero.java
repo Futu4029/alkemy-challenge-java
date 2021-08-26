@@ -1,31 +1,31 @@
 package com.alkemychallenge.movies.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Genero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     @Column(unique = true)
     private String nombre;
     private String image;
     @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
-    private Show peliOSerie;
+    private List<Show> pelisOSeries;
 
-    public Genero(int id, String nombre, String image, Show peliOSerie){
-        this.id = id;
+    public Genero(String nombre, String image, List<Show> peliOSerie){
         this.nombre = nombre;
         this.image = image;
-        this.peliOSerie = peliOSerie;
+        this.pelisOSeries = peliOSerie;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,11 +45,11 @@ public class Genero {
         this.image = image;
     }
 
-    public Show getPeliOSerie() {
-        return peliOSerie;
+    public List<Show> getPelisOSeries() {
+        return pelisOSeries;
     }
 
-    public void setPeliOSerie(Show peliOSerie) {
-        this.peliOSerie = peliOSerie;
+    public void setPelisOSeries(List<Show> pelisOSeries) {
+        this.pelisOSeries = pelisOSeries;
     }
 }

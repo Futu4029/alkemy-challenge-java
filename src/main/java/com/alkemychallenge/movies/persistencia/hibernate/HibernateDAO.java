@@ -1,4 +1,4 @@
-package com.alkemychallenge.movies.persistencia.dao.jdbc.hibernate;
+package com.alkemychallenge.movies.persistencia.hibernate;
 
 import com.alkemychallenge.movies.service.runner.TransactionRunner;
 import org.hibernate.Session;

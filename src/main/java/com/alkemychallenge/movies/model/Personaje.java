@@ -18,8 +18,7 @@ public class Personaje {
     private Show peliOSerie;
 
 
-    public Personaje(int id, String image, String nombre, Integer edad, Integer peso, String historia, Show peliOSerie) {
-        this.id = id;
+    public Personaje(String image, String nombre, Integer edad, Integer peso, String historia, Show peliOSerie) {
         this.image = image;
         this.nombre = nombre;
         this.edad = edad;

@@ -1,7 +1,7 @@
 package com.alkemychallenge.movies.service.impl;
 
 import com.alkemychallenge.movies.model.Pelicula;
-import com.alkemychallenge.movies.persistencia.dao.jdbc.hibernate.HibernatePeliculaDAO;
+import com.alkemychallenge.movies.persistencia.hibernate.HibernatePeliculaDAO;
 import com.alkemychallenge.movies.service.runner.TransactionRunner;
 import org.hibernate.Session;
 
