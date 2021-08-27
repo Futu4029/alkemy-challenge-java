@@ -30,7 +30,7 @@ public class GeneroServiceTest extends HibernateGeneroDAO {
     @Test
     void testCrearGenero(){
         Genero generoTest = new Genero("Terror", "asd", listaDePelis);
-        genderRepository.save(generoTest);
-        Assertions.assertEquals("Terror", generoService.findAll().get(0).getNombre());
+        generoService.save(generoTest);
+        Assertions.assertEquals("Terror", generoService.findAll());
     }
 }

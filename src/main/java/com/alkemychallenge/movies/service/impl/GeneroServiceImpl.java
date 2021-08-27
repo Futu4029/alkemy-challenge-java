@@ -19,7 +19,6 @@ public class GeneroServiceImpl {
             this.genderRepository = genderRepository;
     }
 
-
     @Transactional
     public Optional<Genero> findById(Long id){
         return genderRepository.findById(id);
