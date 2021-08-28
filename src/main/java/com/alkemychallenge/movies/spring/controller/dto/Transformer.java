@@ -1,9 +1,8 @@
-package com.alkemychallenge.movies.spring.controller.responseClasses;
+package com.alkemychallenge.movies.spring.controller.dto;
 
 import com.alkemychallenge.movies.model.Pelicula;
 import com.alkemychallenge.movies.model.Personaje;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

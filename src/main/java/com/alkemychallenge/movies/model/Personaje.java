@@ -1,6 +1,7 @@
 package com.alkemychallenge.movies.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Personaje {
@@ -14,17 +15,20 @@ public class Personaje {
     private Integer edad;
     private Integer peso;
     private String historia;
-    @OneToMany
-    private Show peliOSerie;
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private List<Pelicula> peli;
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private List<Serie> serie;
 
 
-    public Personaje(String image, String nombre, Integer edad, Integer peso, String historia, Show peliOSerie) {
+    public Personaje(String image, String nombre, Integer edad, Integer peso, String historia, List<Pelicula> peli, List<Serie> serie) {
         this.image = image;
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
         this.historia = historia;
-        this.peliOSerie = peliOSerie;
+        this.peli = peli;
+        this.serie = serie;
     }
 
     public int getId() {
@@ -75,11 +79,19 @@ public class Personaje {
         this.historia = historia;
     }
 
-    public Show getPeliOSerie() {
-        return peliOSerie;
+    public List<Pelicula> getPeli() {
+        return peli;
     }
 
-    public void setPeliOSerie(Show peliOSerie) {
-        this.peliOSerie = peliOSerie;
+    public void setPeli(List<Pelicula> peli) {
+        this.peli = peli;
+    }
+
+    public List<Serie> getSerie() {
+        return serie;
+    }
+
+    public void setSerie(List<Serie> serie) {
+        this.serie = serie;
     }
 }

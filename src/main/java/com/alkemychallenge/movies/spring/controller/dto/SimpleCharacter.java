@@ -1,4 +1,4 @@
-package com.alkemychallenge.movies.spring.controller.responseClasses;
+package com.alkemychallenge.movies.spring.controller.dto;
 
 class SimpleCharacter{
     private String image;

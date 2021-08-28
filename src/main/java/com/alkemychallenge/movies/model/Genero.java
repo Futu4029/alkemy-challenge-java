@@ -13,12 +13,15 @@ public class Genero {
     private String nombre;
     private String image;
     @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
-    private List<Show> pelisOSeries;
+    private List<Pelicula> pelis;
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private List<Serie> serie;
 
-    public Genero(String nombre, String image, List<Show> peliOSerie){
+    public Genero(String nombre, String image, List<Pelicula> peli, List<Serie> serie){
         this.nombre = nombre;
         this.image = image;
-        this.pelisOSeries = peliOSerie;
+        this.pelis = peli;
+        this.serie = serie;
     }
 
     public Long getId() {
@@ -45,11 +48,19 @@ public class Genero {
         this.image = image;
     }
 
-    public List<Show> getPelisOSeries() {
-        return pelisOSeries;
+    public List<Pelicula> getPelis() {
+        return pelis;
     }
 
-    public void setPelisOSeries(List<Show> pelisOSeries) {
-        this.pelisOSeries = pelisOSeries;
+    public void setPelis(List<Pelicula> pelis) {
+        this.pelis = pelis;
+    }
+
+    public List<Serie> getSerie() {
+        return serie;
+    }
+
+    public void setSerie(List<Serie> serie) {
+        this.serie = serie;
     }
 }

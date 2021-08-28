@@ -1,4 +1,4 @@
-package com.alkemychallenge.movies.spring.controller;
+package com.alkemychallenge.movies.websecurity;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
